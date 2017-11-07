@@ -279,6 +279,7 @@ class Credis_Cluster
   public function isReadOnlyCommand($command)
   {
       static $readOnlyCommands = array(
+      	  'EVAL' => true,
           'DBSIZE' => true,
           'INFO' => true,
           'MONITOR' => true,
